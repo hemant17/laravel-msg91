@@ -64,7 +64,7 @@ class LaravelMsg91 {
 		$this->route = config('laravel-msg91.route');
 		$this->limit_credit = config('laravel-msg91.limit_credit') ? :false;
 		$this->country = config('laravel-msg91.country') ?:0;
-		$this->guzzle = new GuzzleClient(["base_uri" => "https://control.msg91.com/api/"]);
+		$this->guzzle = new GuzzleClient(["base_uri" => config('laravel-msg91.site_url')? "https://control.msg91.com/api/"]);
 	}
 
 
